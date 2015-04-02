@@ -126,4 +126,4 @@ Lets run the server, then open a browser and go to http://localhost:3000
 meteor
 ```
 
-
+Try making changes in your Meteor application and watch it reload the browser instantly!
