@@ -1,0 +1,49 @@
+<head>
+  <title>chat</title>
+</head>
+
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Chat App</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- Add the template given by the package -->
+        {{> loginButtons}}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Area -->
+  <div class="container">
+    <h1>Welcome to Meteor!</h1>
+    <!-- Import the chat template -->
+    {{> chat }}
+  </div>
+
+</body>
+
+<template name="chat">
+  {{#if currentUser }}
+    <h3>Username: {{username}}</h3>
+  {{/if}}
+  <table class="table">
+    <thead>
+      <th>Username</th>
+      <th>Message</th>
+    </thead>
+    {{#each messages}}
+      <tr>
+        <td>{{user}}</td>
+        <td>{{msg}}</td>
+      </tr>
+    {{/each}}
+  </table>
+  {{#if currentUser }}
+    <input type="text" class="form-control message" placeholder="message" />
+    <button class="btn btn-primary send">Send Message</button>
+  {{/if}}
+</template>
