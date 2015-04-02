@@ -3,7 +3,7 @@
 ## Statistics
 
 Total lines of code including comments and line spacing:  
-79 (49 from HTML and 30 from CSS)
+79 (49 from HTML and 30 from JavaScript)
 
 ## Instructions
 
