@@ -114,8 +114,8 @@ Template.chat.events({
 });
 ```
 
-We cant store data without a Mongo collection, so lets create it
-NOTE: Have it outside of the `Meteor.isClient` because you want the collection on both the client and server
+We cant store data without a Mongo collection, so lets create it  
+NOTE: Have it outside of the `Meteor.isClient` because you want the collection on both the client and server  
 ```javascript
 Messages = new Mongo.Collection('messages');
 ```
