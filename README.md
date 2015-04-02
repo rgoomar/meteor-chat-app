@@ -2,22 +2,22 @@
 
 ## Instructions
 
-Create the Meteor app
+Create the Meteor app  
 `meteor create chat`
 
-Add in a package to get basic password-based authentication
+Add in a package to get basic password-based authentication  
 `meteor add accounts-password`
 
-Add basic CSS styling with Bootstrap (note: it’s an official package)
+Add basic CSS styling with Bootstrap (note: it’s an official package)  
 `meteor add twbs:bootstrap`
 
-Package to give you a basic login / sign up form
+Package to give you a basic login / sign up form  
 `meteor add ian:accounts-ui-bootstrap-3`
 
 #### Building out the HTML
 
 Setup authentication navigation bar
-```
+```html
 <!-- Top Navigation Bar -->
 <div class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
@@ -33,7 +33,7 @@ Setup authentication navigation bar
 ```
 
 Setup the chat area template
-```
+```html
 <template name="chat">
   {{#if currentUser }}
     <h3>Username: {{username}}</h3>
@@ -58,7 +58,7 @@ Setup the chat area template
 ```
 
 Create the main container and import the chat template
-```
+```html
 <!-- Main Area -->
 <div class="container">
   <h1>Welcome to Meteor!</h1>
@@ -70,14 +70,14 @@ Create the main container and import the chat template
 #### Building out the JavaScript File
 
 Ensure the code is client-only
-```
+```javascript
 if (Meteor.isClient) {
   // Code goes here
 }
 ```
 
 Add in authentication configuration options
-```
+```javascript
 // Setup the configuration options for accounts package
 Accounts.ui.config({
   'passwordSignupFields': 'USERNAME_ONLY'
@@ -85,7 +85,7 @@ Accounts.ui.config({
 ```
 
 Setup the template helpers
-```
+```javascript
 // Setup template helpers
 Template.chat.helpers({
   'username' : function() {
@@ -98,7 +98,7 @@ Template.chat.helpers({
 ```
 
 Setup template event handlers
-```
+```javascript
 // Setup the event handlers
 Template.chat.events({
   // When the send button is clicked
@@ -116,7 +116,7 @@ Template.chat.events({
 
 We cant store data without a Mongo collection, so lets create it
 NOTE: Have it outside of the `Meteor.isClient` because you want the collection on both the client and server
-```
+```javascript
 Messages = new Mongo.Collection('messages');
 ```
 
