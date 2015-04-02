@@ -1,5 +1,10 @@
 # Meteor Intro Chat Application
 
+## Statistics
+
+Total lines of code including comments and line spacing:  
+79 (49 from HTML and 30 from CSS)
+
 ## Instructions
 
 Create the Meteor app  
