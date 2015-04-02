@@ -34,11 +34,11 @@ Setup authentication navigation bar
 
 Setup the chat area template
 ```
-<template name=”chat”>
+<template name="chat">
   {{#if currentUser }}
     <h3>Username: {{username}}</h3>
   {{/if}}
-  <table class=”table”>
+  <table class="table">
     <thead>
       <th>Username</th>
       <th>Message</th>
@@ -51,8 +51,8 @@ Setup the chat area template
     {{/each}}
   </table>
   {{#if currentUser }}
-    <input type=”text” class=”form-control message” placeholder=”message” />
-    <button class=”btn btn-primary send”>Send Message</button>
+    <input type="text" class="form-control message" placeholder="message" />
+    <button class="btn btn-primary send">Send Message</button>
   {{/if}}
 </template>
 ```
