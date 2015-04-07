@@ -1,5 +1,7 @@
 # Meteor Intro Chat Application
 
+[Slides](http://slides.com/rgoomar/intro-to-meteor) that went with it
+
 ## Statistics
 
 Total lines of code including comments and line spacing:  
