@@ -30,7 +30,7 @@ Setup authentication navigation bar
   </div>
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
-      <!-- Add the template given by the package -->
+      <!-- Add the template given by the accounts-ui package -->
       {{> loginButtons}}
     </ul>
   </div>
@@ -120,7 +120,7 @@ Template.chat.events({
 ```
 
 We cant store data without a Mongo collection, so lets create it  
-NOTE: Have it outside of the `Meteor.isClient` because you want the collection on both the client and server  
+NOTE: Have it outside of the `Meteor.isClient` statement because you want the collection on both the client and server  
 ```javascript
 Messages = new Mongo.Collection('messages');
 ```
